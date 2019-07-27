@@ -1,0 +1,187 @@
+#siteBaslik{
+	font-size: 2em;
+	font-weight: bold;
+}
+#siteBaslik > img{
+	height: 1.6em;
+	border-radius: 100%;
+}
+#scrollYukari{
+	position: fixed;
+	top: 80%;
+	left: 90%;
+}
+
+
+
+/* Ana Yansı */
+#anaSlide .carousel-inner{
+	border-radius: 3px;
+}
+#anaSlide .carousel-item{
+	max-height: 450px !important;
+	border-radius: 3px;
+	background: rgb(0,0,0);
+	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(31,31,31,1) 6%, rgba(255,255,255,0) 100%);
+}
+#anaSlide .carousel-item img{
+	width: 100%;
+}
+#anaSlide .carousel-control-prev-icon, #anaSlide .carousel-control-next-icon{
+
+}
+#anaSlide .carousel-item .carousel-caption > a{
+	/* background-color: rgba(0,0,0,0.8); */
+	/* border-radius: 2%; */
+	/* box-shadow: 0 0px 25px black; */
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+	font-size: 2em;
+	color:white;
+}
+/* / Ana Yansı */
+
+/* Medya listesi */
+.medyaListesi {
+	list-style: none;
+	padding-left: 0;
+}
+.medyaListesi > li{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: start;
+	align-items: flex-start;
+
+	margin-bottom: 20px;
+}
+.medyaListesi > li > img{
+	width: 50%;
+  border-radius: 3px;
+}
+.medyaListesi > li > a{
+	-ms-flex: 1;
+	flex: 1;
+	color: #3f3f3f;
+
+	padding: 5px;
+	margin-left: 2px;
+	font-size: 1rem;
+}
+.medyaListesi > li > small{
+	color: #6c757d;
+}
+/* / Medya listesi */
+
+/* Vitrin listesi */
+.vitrinListesi {
+	list-style: none;
+	padding-left: 0;
+}
+.vitrinListesi > li{
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: start;
+	align-items: flex-start;
+
+	margin-bottom: 20px;
+}
+.vitrinListesi > li > img{
+	width: 25%;
+  border-radius: 3px;
+}
+.vitrinListesi > li > div{
+	-ms-flex: 1;
+	flex: 1;
+	color: #3f3f3f;
+
+	padding: 5px;
+	margin-left: 2px;
+	font-size: 1rem;
+}
+.vitrinListesi > li > div > a{
+	font-size: 1.2rem;
+}
+.vitrinListesi > li > small{
+	color: #6c757d;
+}
+/* / Vitrin listesi */
+
+/* Paylaş ikonları */
+.pFacebook{background-color: #3b5998;}
+.pInstagram{background-color: #3f729b;}
+.pTwitter{background-color: #55acee;}
+.pWhatsapp{background-color: #25D366;}
+.pLinkedin{background-color: #007bb6;}
+/* / Paylaş ikonları */
+
+/* Yöneticiler İçin Yan Panel */
+#yanAdminPanel{
+	color:white;
+	position:fixed;
+	top:25%;
+	bottom:25%;
+	right:0px;
+	left:80%;
+	border-radius:15px 0px 0px 15px;
+	padding:3px;
+	text-align: center;
+	background-color: #222d32;
+	z-index: 10;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  #yanAdminPanel {left: 85%;}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #yanAdminPanel {left: 90%;}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #yanAdminPanel {left: 93%;}
+}
+@media (min-width: 1200px) {
+  #yanAdminPanel {left: 95%;}
+}
+#yanAdminPanel > img{
+	margin:1px;
+	border-radius:100%;
+}
+#yanAdminPanel > h1{font-size: 0.8em; text-align: center; font-weight: bold;}
+#yanAdminPanel > h2{font-size: 0.7em;}
+/* / Yöneticiler İçin Yan Panel */
+
+/* Yorumlar */
+#tumYorumlar .yorum{
+	border-bottom: 1px solid #d2d6de;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	color: #666;
+}
+#tumYorumlar .yorum > .yorumKullanici{
+	margin-bottom: 15px;
+}
+#tumYorumlar .yorum > .yorumKullanici > img{
+	width: 40px;
+	height: 40px;
+	float: left;
+	border: 2px solid #d2d6de;
+	padding: 2px;
+	border-radius: 50%;
+}
+#tumYorumlar .yorum > .yorumKullanici > .yorumKullaniciAdi{
+	font-size: 16px;
+	font-weight: 600;
+	display: block;
+	margin-left: 50px;
+	color: #3c8dbc;
+
+}
+#tumYorumlar .yorum > .yorumKullanici > .yorumKullaniciEk{
+	color: #999;
+	font-size: 13px;
+	display: block;
+	margin-left: 50px;
+}
+#tumYorumlar .cevap-1{margin-left:10%;}
+#tumYorumlar .cevap-2{margin-left:15%;}
+/* / Yorumlar */
+

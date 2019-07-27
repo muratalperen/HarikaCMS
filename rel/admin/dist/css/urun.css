@@ -1,0 +1,51 @@
+.yorum{
+	border-bottom: 1px solid #d2d6de;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	color: #666 !important;
+}
+
+.yorum > .yorumKullanici {
+  margin-bottom: 15px;
+}
+
+.yorum > .yorumKullanici > img {
+	width: 40px;
+	height: 40px;
+	float: left;
+	border-radius: 50%;
+  vertical-align: middle;
+	border: 2px solid #d2d6de !important;
+	padding: 2px;
+}
+
+.yorumKullanici > .yorumKullaniciAdi {
+    font-size: 16px;
+    font-weight: 600;
+}
+/* .yorumKullanici .yorumKullaniciAdi, .yorumKullanici .yorumKullaniciEk, .yorumKullanici .comment { */
+.yorumKullanici > .yorumKullaniciAdi, .yorumKullanici > .yorumKullaniciEk{
+    display: block;
+    margin-left: 50px;
+}
+.yorum a, .yorumKullaniciAdi {
+    color: #3c8dbc !important;
+    text-decoration: none;
+		background-color: transparent;
+}
+
+.yorumKullanici .yorumKullaniciEk {
+    color: #999 !important;
+    font-size: 13px;
+}
+#tumYorumlar > .yorum > p {
+    margin: 0 0 10px;
+}
+
+
+#tumYorumlar > .cevap-1 {
+	margin-left: 10% !important;
+}
+#tumYorumlar > .cevap-2 {
+	margin-left: 20% !important;
+}

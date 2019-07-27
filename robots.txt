@@ -1,0 +1,3 @@
+#Site taranmaya kapalı
+User-agent: *
+Disallow: /

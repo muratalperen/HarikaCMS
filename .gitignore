@@ -1,0 +1,29 @@
+Yapılacaklar.txt
+gizli/yedek.zip
+dosya/img/*
+dosya/icerik/resim/*
+dosya/icerik/dosya/*
+rel/img/captcha/*
+rel/img/admin/*
+
+# Codeigniter
+*/logs/log-*.php
+*/logs/index.html
+*/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+/vendor/
+
+# Numerous always-ignore extensions
+*.err
+*.log
+*.zip
+*~
+
+# OS or Editor folders
+._*
+.cache
+.DS_Store

@@ -264,7 +264,9 @@ class Admin extends CI_Controller {
 	{
 		if ($metod == 'ekle') {
 			girmek_icin_gerekli_seviye(YONETICI_NOR);
-			render_page('urunEkle', 'Ürün Ekle');
+			render_page('urunEkle', 'Ürün Ekle', array(
+				'ekleJS' => array('dist/js/seo')
+			));
 
 		} elseif ($metod == 'yonet') {
 
@@ -296,8 +298,8 @@ class Admin extends CI_Controller {
 			}
 
 			render_page('urunYonet', 'Ürünleri Yönetin', array(
-				'ekleCSS'			=>	array ('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css'),
-				'ekleJS'			=> array ('bower_components/datatables.net/js/jquery.dataTables.tr.min.js', 'bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js'),
+				'ekleCSS'			=>	array ('bower_components/datatables.net-bs/css/dataTables.bootstrap.min'),
+				'ekleJS'			=> array ('bower_components/datatables.net/js/jquery.dataTables.tr.min', 'bower_components/datatables.net-bs/js/dataTables.bootstrap.min'),
 				'footerExtra'	=> '<script> $(function () { $("#urunTablosu").DataTable() }) </script>'
 			));
 
@@ -319,7 +321,9 @@ class Admin extends CI_Controller {
 				boyle_birsey_olamaz('urun/yonet');
 			}
 
-			render_page('urunEkle', 'Ürün Düzenle');
+			render_page('urunEkle', 'Ürün Düzenle', array(
+				'ekleJS' => array('dist/js/seo')
+			));
 
 		} elseif ($metod == 'onizle') {
 
@@ -418,7 +422,7 @@ class Admin extends CI_Controller {
 		$this->viewData['tablo'] = $this->table->generate();
 
 		render_page('yorumlar', (($yeniMi)?'Yeni Yorumları İnceleyin':'Yorumları Yönetin'),array(
-			'ekleCSS'			=> array ('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css'),
+			'ekleCSS'			=> array ('bower_components/datatables.net-bs/css/dataTables.bootstrap.min'),
 			'ekleJS'			=> array ('bower_components/datatables.net/js/jquery.dataTables.tr.min', 'bower_components/datatables.net-bs/js/dataTables.bootstrap.min'),
 			'footerExtra'	=> '<script> $(function () { $("#yorumTablosu").DataTable() }) </script>'
 		));

@@ -87,31 +87,6 @@ function siteyiKur()
 
 	if ( ! function_exists('seflink')) require 'main_helper.php';
 
-	/**
-	* Remove Directory Recursive
-	*
-	* Dizini siler
-	*
-	* @param string	Silinecek dizin adı
-	* @param boolean	Dizinin kendisi de silinecek mi
-	*/
-	function rmdir_recursive($dir, $deleteFolder = FALSE) {
-		foreach(scandir($dir) as $file) {
-			if ('.' !== $file && '..' !== $file)
-			{
-				if (is_dir("$dir/$file")) {
-					rmdir_recursive("$dir/$file", $deleteFolder);
-				}	else {
-					if ( ! unlink("$dir/$file")) {
-						global $ret;
-						$ret .= "$dir/$file" . ' dosyası silinemedi. Lütfen el ile silin.<br>';
-					}
-				}
-			}
-		}
-		if ($deleteFolder && is_dir("$dir/$file")) rmdir("$dir/$file");
-	}
-
 	// Array şeklinde kategori ve alt kategori yazıları
 	$kateg = "";
 	$Tkateg = "";
@@ -166,18 +141,57 @@ function siteyiKur()
   degistir("\\\$altkateg = \[[^;]*;", "\$altkateg = [$altkateg];", 'helpers/main_helper.php');
   degistir("\\\$Taltkateg = \[[^;]*;", "\$Taltkateg = [$Taltkateg];", 'helpers/main_helper.php');
 
+	/**
+	* Remove Directory Recursive
+	*
+	* Dizini siler
+	*
+	* @param string	Silinecek dizin adı
+	* @param boolean	Dizinin kendisi de silinecek mi
+	*/
+	function rmdir_recursive($dir, $deleteFolder = FALSE) {
+		foreach(scandir($dir) as $file) {
+			if ('.' !== $file && '..' !== $file)
+			{
+				if (is_dir("$dir/$file")) {
+					rmdir_recursive("$dir/$file", $deleteFolder);
+				}	else {
+					if ( ! unlink("$dir/$file")) {
+						global $ret;
+						$ret .= "$dir/$file" . ' dosyası silinemedi. Lütfen el ile silin.<br>';
+					}
+				}
+			}
+		}
+		if ($deleteFolder && is_dir("$dir/$file")) rmdir("$dir/$file");
+	}
 
-	rmdir_recursive('docs', TRUE);
+	/**
+	* Varsa Sil
+	*
+	* Klasör/Dosya varsa silme fonksiyonunu çalıştırır.
+	*
+	* @param string	Silinecek dizin adı
+	* @param boolean	Dizinin kendisi de silinecek mi
+	*/
+	function varsa_sil($dir, $deleteFolder = FALSE) {
+		if (file_exists($dir)){
+			if (is_file($dir)) {
+				if ( ! unlink($dir))
+					$ret .= $dir . ' dosyası silinemedi. Lütfen el ile silin.<br>';
+			} else {
+				rmdir_recursive($dir, $deleteFolder);
+			}
+		}
+	}
 
-	// Varsa gereksiz dosyaları sil
-	if (file_exists('.git'))
-		rmdir_recursive('.git', TRUE);
-
-	if (file_exists('README.md'))
-		if ( ! unlink('README.md')) $ret .= '"README.md" dosyası silinemedi. Lütfen el ile silin.<br>';
-
-	if (file_exists('LICENSE'))
-		if ( ! unlink('LICENSE')) $ret .= '"LICENSE" dosyası silinemedi. Lütfen el ile silin.<br>';
+	// Gereksiz doslayaları sil
+	varsa_sil('docs', TRUE);
+	varsa_sil('.git', TRUE);
+	varsa_sil('README.md');
+	varsa_sil('LICENSE');
+	varsa_sil('.gitignore');
+	varsa_sil('Yapılacaklar.txt');
 
 	// IDEA: chmod ayarları yapılabilir
 

@@ -4,17 +4,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L]
 
-# Www yönlendirmesi
-#RewriteCond %{HTTP_HOST} www.dfatih.xyz [nc]
-#RewriteRule (.*) http://dfatih.xyz/$1 [R=301,L]
-
 # Hata sayfaları
 ErrorDocument 403 /sayfa/hata/403
 ErrorDocument 404 /sayfa/hata/404
 ErrorDocument 500 /sayfa/hata/500
 ErrorDocument 502 /sayfa/hata/502
-
-#Yönlendirmeler
-#Redirect 301 /wp-admin http://dfatih.xyz/site/
 
 # Sıkıştırma kodları eklenmeli

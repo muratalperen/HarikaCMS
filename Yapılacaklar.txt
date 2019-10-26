@@ -1,0 +1,22 @@
+Hata Düzelt:
+Zaten öyle veritabanı varsa önce onu sil. Sonra hata veriyor
+recursive remove .. ları da silmeye çalışıyor. Sonra yapamıyor.
+Docs klasörü içindekiler silindi ama en son klasör de silinmeli
+Anahtar kelime kullanımı türkçe karakter sorunu var ve sıralamıyor
+
+Özellik Ekle:
+seo.js stop wordları ayrı json dosyasından çek
+Footer link kontrol
+Önizle jpg resim değilse uyar
+Anahtar kelime seç php yi yazma yerine entegre et
+Yedek sql olarak alınsın
+Mail aboneleri indirilebilsin (csv, json, xml)
+Yorumlar incelenmeden yayınlanmasın seçeneği koy
+Logoyu değiştir
+
+Git Yüklemeden Önce:
+Yönetim panelinden robots.txt indexlenmeyi kapat
+Yönetim panelinden siteyi sıfırla
+docs ve git klasörünü; README.md, LICENSE, .gitignore ve Yapılacaklar.txt geri yükle
+
+

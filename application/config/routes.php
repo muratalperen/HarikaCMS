@@ -57,7 +57,7 @@ $route['sitemap.xml'] = 'sayfa/sitemap';
 $route['urunmap.xml'] = 'sayfa/sitemap/1';
 
 //kategorileri yönlendirmesi için tüm kategoriler sef link şeklinde:
-foreach (['kategori-bir','web','yazilim'] as $key) {
+foreach (['kategori-bir'] as $key) {
 	$route[$key]														= 'u/index/' . $key;
 	$route[$key . '/(:any)']								= 'u/index/' . $key . '/$1';
 	$route[$key . '/(:any)/(:any)']					= 'u/index/' . $key . '/$1/$2';

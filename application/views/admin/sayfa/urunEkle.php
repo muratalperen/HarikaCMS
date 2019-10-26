@@ -94,8 +94,18 @@
 			</div>
 
 			<div class="form-group">
-				<label for="icerik">İçerik</label> <small>Markdown ile yazın</small>
-				<textarea name="icerik" rows="20" class="form-control" id="icerik" placeholder="İçerik Girin" required><?php echo (isset($urun) ? htmlspecialchars($urun->icerik) : ''); ?></textarea>
+				<div class="row">
+					<div class="col-md-11">
+						<label for="icerik">İçerik</label> <small>Markdown ile yazın</small>
+						<textarea name="icerik" rows="20" class="form-control" id="icerik" placeholder="İçerik Girin" onchange="Seo.freqHesapla();" required><?php echo (isset($urun) ? htmlspecialchars($urun->icerik) : ''); ?></textarea>
+					</div>
+					<div class="col-md-1">
+						<label>Anahtar Kelime</label><hr>
+						<div id="yaziFrequency">
+
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -106,6 +116,9 @@
 			<button type="button" class="btn btn-info" onclick="yaziBilgilendir();"><i class="fa fa-info"></i>  Yardım</button>
 			<button type="button" class="btn bg-orange" onclick="onizle();"><i class="fa fa-eye"></i>  Ön İzleme</button>
 			<script type="text/javascript">
+			window.onload = function () {
+				Seo = new seo();
+			}
 			function onizle() {
 				var fomr = document.getElementById('urunForm');
 				var eskiAction = fomr.action;

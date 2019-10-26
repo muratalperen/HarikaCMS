@@ -18,11 +18,11 @@ define ('site_YOL', '');
  * @method			urunLink: Verilen veritabanı sonucu veya kategori ve alt kategori id'si ile seflink'i verilen ürünün adresini verir
  */
 class urun{
-  public $kategoriSayisi = 3;
-  public $kateg = ['Kategori Bir','Web','Yazılım']; // WARNING: Burayı güncelleyince router'i de güncelle (array ve onun uzunluğu)
-  public $altkateg = [['Alt Kategori Bir',' Alt Kategori İki'],['Kodlama',' Harika Cms',' Blog'],['Standartlar',' Python',' Diğer']];
-	public $Tkateg = ['kategori-bir','web','yazilim'];
-  public $Taltkateg = [['alt-kategori-bir','alt-kategori-iki'],['kodlama','harika-cms','blog'],['standartlar','python','diger']];
+  public $kategoriSayisi = 1;
+  public $kateg = ['Kategori Bir']; // WARNING: Burayı güncelleyince router'i de güncelle (array ve onun uzunluğu)
+  public $altkateg = [['Al']];
+	public $Tkateg = ['kategori-bir'];
+  public $Taltkateg = [['al']];
 
 	/**
 	 * Ürün Link

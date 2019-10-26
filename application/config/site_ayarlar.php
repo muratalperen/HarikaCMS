@@ -16,11 +16,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | sayfası vs.)
 */
 $config['site'] = (object) array(
-	'ad'						=> 'Harika CMS',
-	'hakkinda'			=> 'Harika CMS, esnek bir ürün yönetim sistemidir. Buraya hakkında yazısı yazılır.',
+	'ad'						=> 'Bir Site',
+	'hakkinda'			=> 'Deneme website. Blog platformu',
 	'iletisimMail'	=> 'iletisim@protonmail.com',
 	'medya'					=> array(
-		'twitter'		=> 'http://twitter.com/',
+		'twitter'		=> '',
 		'facebook'	=> '',
 		'instagram'	=> ''
 	)
